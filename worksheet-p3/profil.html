@@ -37,23 +37,22 @@
             <th scope="row">Mobile Legends</th>
             <td>Mythic Imortal</td>
             <td>65%</td>
-            <td>Season 40</td>
+            <td>15 September 2026</td>
         </tr>
         <tr>
             <th scope="row">Free Fire</th>
             <td>Master</td>
             <td>40%</td>
-            <td>Season 42</td>
+            <td>2 Mei 2022</td>
         </tr>
         <tr>
             <th scope="row">Valorant</th>
             <td>Silver</td>
             <td>50%</td>
-            <td>V26 Act 5</td>
+            <td>12 September 2026</td>
          </tr>
         </tbody>
       </table>
-
     <figure>
         <img src="game.webp"
             alt="Screenshot yang berisi rank game yang dicapai"
@@ -68,20 +67,36 @@
             width="640" height="360" loading="lazy">
         <figcaption figcaption>Tangkapan layar game Valo</figcaption>
     </figure>
-
-
     </section>
- 
     <section id="bagian-2">
       <h2>Catat Rank Baru</h2>
-      <!-- form Anda nanti di sini (Lembar E) -->
+        <form action="/simpan" method="post">
+            <p>
+             <label for="Game">Game</label>
+             <input type="text" id="Game" name="Game" required>
+            </p>
+        <form action="/simpan" method="post">
+            <p>
+             <label for="Rank">Rank</label>
+             <input type="text" id="Rank" name="Rank" required>
+            </p>
+        <form action="/simpan" method="post">
+            <p>
+             <label for="Winrate">Winrate</label>
+             <input type="number" id="Winrate" name="Winrate" required min="0" max="100">
+            </p>
+        <form action="/simpan" method="post">
+            <p>
+             <label for="Dicapai pada">Dicapai pada</label>
+             <input type="date" id="Dicapai pada" name="Dicapai pada" required>
+            </p>
+            <button type="submit">Simpan</button>
+        </form>
     </section>
-
     <section id="bagian-3">
       <h2>Tentang Saya</h2>
     </section>
   </main>
-
 <footer>
     <p>AUFAA RIFQII EKA PRAHASTYA · 25523122 · 2026</p>
 </footer>
