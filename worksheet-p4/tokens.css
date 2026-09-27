@@ -1,0 +1,46 @@
+/* LAPIS 1 - Primitif (Nilai mentah) */
+:root {
+  --slate-900: #101822;
+  --slate-800: #17202d;
+  --slate-700: #1b2838;
+  --slate-600: #212b3b;
+  --slate-500: #2a3b4f;
+
+  --cyan-400: #66c0f4;
+  --cyan-500: #54a5d4;
+  --red-400: #ffb4ab;
+
+  --text-bright: #ebebeb;
+  --text-main: #c7d5e0;
+  --text-sub: #8f98a0;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+
+  --radius-md: 0.25rem;
+  --radius-full: 999px;
+  --shadow-1: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  --text-sm: 0.8125rem;
+  --text-md: 0.9375rem;
+  --text-xl: 1.25rem;
+  --text-3xl: 1.75rem;
+}
+
+/* LAPIS 2 - Semantik (Peran dalam antarmuka) */
+:root {
+  --color-bg: var(--slate-900);
+  --color-fg: var(--text-main);
+  --color-surface: var(--slate-700);
+  --color-surface-low: var(--slate-800);
+  --color-border: var(--slate-600);
+  --color-primary: var(--cyan-400);
+  --color-danger: var(--red-400);
+  --color-focus: var(--cyan-400);
+
+  --card-pad: var(--space-4);
+  --section-gap: var(--space-6);
+}
