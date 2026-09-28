@@ -2,9 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" 
-        content="width=device-width,
-                 initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catatan Rank Game Saya</title>
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="base.css">
@@ -14,9 +12,11 @@
 </head>
 <body>
   <header>
-  <input type="checkbox" id="tema" class="pengalih-tema">
-  <label for="tema" class="tombol-tema">Tema gelap</label>
     <div class="header-baris">
+      <div class="pengalih-box">
+        <input type="checkbox" id="tema" class="pengalih-tema">
+        <label for="tema" class="tombol-tema">Tema gelap</label>
+      </div>
       <h1>Catatan Rank Game Saya</h1>
       <nav aria-label="Navigasi utama">
         <ul>
@@ -89,21 +89,25 @@
     <section id="bagian-2">
       <h2>Catat Rank Baru</h2>
       <form action="/simpan" method="post">
-        <div class="from-kolom">
+        <div class="form-kolom">
           <label for="Game">Game</label>
           <input type="text" id="Game" name="Game" required placeholder="Contoh: Mobile Legends">
+          <span class="pesan-galat">Nama game wajib diisi.</span>
         </div>
         <div class="form-kolom">
           <label for="Rank">Rank</label>
           <input type="text" id="Rank" name="Rank" required placeholder="Contoh: Mythic">
+          <span class="pesan-galat">Rank wajib diisi.</span>
         </div>
         <div class="form-kolom">
           <label for="Winrate">Winrate (%)</label>
           <input type="number" id="Winrate" name="Winrate" required min="0" max="100" placeholder="60">
+          <span class="pesan-galat">Isi winrate antara 0 sampai 100.</span>
         </div>
         <div class="form-kolom">
           <label for="Dicapai-pada">Dicapai pada</label>
           <input type="date" id="Dicapai-pada" name="Dicapai pada" required>
+          <span class="pesan-galat">Pilih tanggal yang valid.</span>
         </div>
         <button type="submit">Simpan</button>
       </form>

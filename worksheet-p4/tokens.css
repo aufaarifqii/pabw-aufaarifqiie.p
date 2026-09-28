@@ -1,10 +1,17 @@
 /* LAPIS 1 - Primitif (Nilai mentah) */
 :root {
   --slate-900: #101822;
-  --slate-800: #17202d;
+  --slate-800: #fafcff;
   --slate-700: #1b2838;
   --slate-600: #212b3b;
   --slate-500: #2a3b4f;
+  --slate-200: #010101;
+
+  --color-700: #fafcff;
+  --color-600: #101822;
+  --color-500: #ffffff;
+  --color-400: #17386a;
+  --color-200: #b00020;
 
   --cyan-400: #66c0f4;
   --cyan-500: #54a5d4;
