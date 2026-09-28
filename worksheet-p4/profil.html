@@ -14,6 +14,8 @@
 </head>
 <body>
   <header>
+  <input type="checkbox" id="tema" class="pengalih-tema">
+  <label for="tema" class="tombol-tema">Tema gelap</label>
     <div class="header-baris">
       <h1>Catatan Rank Game Saya</h1>
       <nav aria-label="Navigasi utama">
@@ -62,20 +64,20 @@
         </table>
       </div>
 
-      <div class="galeri-rank">
-        <div class="item-rank">
+      <div class="katalog">
+        <div class="kartu">
           <figure>
             <img src="game.webp" alt="Screenshot yang berisi rank game ML" width="640" height="360" loading="lazy">
             <figcaption>Game Mobile Legend</figcaption>
           </figure>
         </div>
-        <div class="item-rank">
+        <div class="kartu">
           <figure>
             <img src="game2.webp" alt="Screenshot yang berisi rank game FF" width="640" height="360" loading="lazy">
             <figcaption>Game Free Fire</figcaption>
           </figure>
         </div>
-        <div class="item-rank">
+        <div class="kartu">
           <figure>
             <img src="game3.webp" alt="Screenshot yang berisi rank game Valo" width="640" height="360" loading="lazy">
             <figcaption>Game Valorant</figcaption>
@@ -87,22 +89,22 @@
     <section id="bagian-2">
       <h2>Catat Rank Baru</h2>
       <form action="/simpan" method="post">
-        <p>
+        <div class="from-kolom">
           <label for="Game">Game</label>
           <input type="text" id="Game" name="Game" required placeholder="Contoh: Mobile Legends">
-        </p>
-        <p>
+        </div>
+        <div class="form-kolom">
           <label for="Rank">Rank</label>
           <input type="text" id="Rank" name="Rank" required placeholder="Contoh: Mythic">
-        </p>
-        <p>
+        </div>
+        <div class="form-kolom">
           <label for="Winrate">Winrate (%)</label>
           <input type="number" id="Winrate" name="Winrate" required min="0" max="100" placeholder="60">
-        </p>
-        <p>
-          <label for="Dicapai pada">Dicapai pada</label>
-          <input type="date" id="Dicapai pada" name="Dicapai pada" required>
-        </p>
+        </div>
+        <div class="form-kolom">
+          <label for="Dicapai-pada">Dicapai pada</label>
+          <input type="date" id="Dicapai-pada" name="Dicapai pada" required>
+        </div>
         <button type="submit">Simpan</button>
       </form>
     </section>
