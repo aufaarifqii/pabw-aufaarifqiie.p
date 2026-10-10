@@ -35,5 +35,5 @@ console.table(judul)
 const selesai = daftarProyek.filter((proyek) => proyek.selesai);
 console.table(selesai);
 
-const katalog = daftarProyek.find((proyek) => proyek.judul === "Kuisin, SIUKT");
-console.log(katalog);
+const katalog = daftarProyek.find((proyek) => proyek.judul === "Kuisin");
+console.table(katalog);

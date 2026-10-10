@@ -44,3 +44,4 @@ Kriteria selesai saya: halaman html saya memiliki warna dan untuk bagian tabel r
 
 Mengecek apakah pekerjaan saya sudah benar atau belum dan tepat atau tidak 
 Memperbaiki kode yang rusak
+Minta penjelasan galat di kode yang saya buat
