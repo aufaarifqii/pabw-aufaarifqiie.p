@@ -5,7 +5,7 @@ const profil = {
   jumlahProyek: 3,
 };
 
-const kalimat = `Nama saya ${profil.nama}, Saya ${profil.peran}, dan saya belajar ${profil.keahlian.length} keahlian.`;;
+const kalimat = `Nama saya ${profil.nama}, Saya ${profil.peran}, dan saya belajar ${profil.keahlian.length} keahlian.`;
 let pilihanAktif ="semua";
 
 console.log(profil)
@@ -35,5 +35,5 @@ console.table(judul)
 const selesai = daftarProyek.filter((proyek) => proyek.selesai);
 console.table(selesai);
 
-const katalog = daftarProyek.find((proyek) => proyek.judul === "Katalog Produk");
+const katalog = daftarProyek.find((proyek) => proyek.judul === "Kuisin, SIUKT");
 console.log(katalog);
