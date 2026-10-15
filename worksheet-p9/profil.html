@@ -75,17 +75,16 @@
       </div>
 
       <p id="empty" hidden style="color: var(--color-danger); padding: 0.5rem 0;">
-        Tidak ada riwayat untuk kategori game ini
+        Tidak ada riwayat game yang sesuai dengan kategori ini
       </p>
 
       <div id="list" class="katalog">
-
       </div>
     </section>
 
     <section id="bagian-2">
       <h2>Catat Rank Baru</h2>
-      <form action="/simpan" method="post">
+      <form action="/simpan" method="post" novalidate>
         <div class="form-kolom">
           <label for="Game">Game</label>
           <input type="text" id="Game" name="Game" required placeholder="Contoh: Mobile Legends">

@@ -64,11 +64,17 @@ button {
   outline-offset: 2px;
 }
 
-input:user-invalid {
+input:user-invalid,
+input[aria-invalid="true"] {
   border-color: var(--color-danger);
   border-width: 2px;
 }
 
-/* Pesan galat: sembunyikan selama belum tidak-sah, tampilkan saat perlu */
-.pesan-galat       { display: none; color: var(--color-danger); font-size: var(--text-sm); }
-.form-kolom:has(input:user-invalid) .pesan-galat { display: block; }
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pesan-galat { display: none; color: var(--color-danger); font-size: var(--text-sm); }
+.form-kolom:has(input:user-invalid) .pesan-galat,
+.form-kolom:has(input[aria-invalid="true"]) .pesan-galat { display: block; }
