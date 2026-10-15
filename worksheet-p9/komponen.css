@@ -28,6 +28,19 @@ button {
   cursor: pointer;
 }
 
+#filter button {
+  background: var(--color-surface);
+  color: var(--color-fg);
+  border: 1px solid var(--color-border);
+}
+
+#filter button.active {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-weight: 600;
+}
+
+
 .pengalih-box {
   display: flex;
   align-items: center;

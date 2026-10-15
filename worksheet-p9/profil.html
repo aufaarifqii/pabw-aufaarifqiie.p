@@ -34,13 +34,6 @@
   <main>
     <section id="bagian-1">
       <h2>Riwayat Rank</h2>
-      <div id="list"></div>
-      <div id="filter">
-        <button data-category="all">Semua</button>
-        <button data-category="Mobile Legends">Mobile Legends</button>
-        <button data-category="Free Fire">Free Fire</button>
-        <button data-category="Valorant">Valorant</button>
-      </div>  
       <div class="tabel-wadah">
         <table>
           <thead>
@@ -74,50 +67,43 @@
         </table>
       </div>
 
-      <div class="katalog">
-        <div class="kartu">
-          <figure>
-            <img src="game.webp" alt="Screenshot yang berisi rank game ML" width="640" height="360" loading="lazy">
-            <figcaption>Game Mobile Legend</figcaption>
-          </figure>
-        </div>
-        <div class="kartu">
-          <figure>
-            <img src="game2.webp" alt="Screenshot yang berisi rank game FF" width="640" height="360" loading="lazy">
-            <figcaption>Game Free Fire</figcaption>
-          </figure>
-        </div>
-        <div class="kartu">
-          <figure>
-            <img src="game3.webp" alt="Screenshot yang berisi rank game Valo" width="640" height="360" loading="lazy">
-            <figcaption>Game Valorant</figcaption>
-          </figure>
-        </div>
+      <div id="filter" style="display: flex; gap: 0.5rem; margin-block: 1rem;">
+        <button type="button" data-category="all" class="active">Semua</button>
+        <button type="button" data-category="moba">MOBA</button>
+        <button type="button" data-category="fps">FPS</button>
+        <button type="button" data-category="rpg">RPG</button>
+      </div>
+
+      <p id="empty" hidden style="color: var(--color-danger); padding: 0.5rem 0;">
+        Tidak ada proyek yang sesuai dengan kategori ini.
+      </p>
+
+      <div id="list" class="katalog">
+        <!-- Kartu akan dirender secara dinamis oleh js/dom.js dari data daftarProyek -->
       </div>
     </section>
 
     <section id="bagian-2">
       <h2>Catat Rank Baru</h2>
-      <p id="empty" hidden>Belum ada data.</p>
-      <form id="profile-form" action="/simpan" method="post">
+      <form action="/simpan" method="post">
         <div class="form-kolom">
-          <label for="game">Game</label>
-          <input type="text" id="game" name="game" required placeholder="Contoh: Mobile Legends">
+          <label for="Game">Game</label>
+          <input type="text" id="Game" name="Game" required placeholder="Contoh: Mobile Legends">
           <span class="pesan-galat">Nama game wajib diisi.</span>
         </div>
         <div class="form-kolom">
-          <label for="rank">Rank</label>
-          <input type="text" id="rank" name="rank" required placeholder="Contoh: Mythic">
+          <label for="Rank">Rank</label>
+          <input type="text" id="Rank" name="Rank" required placeholder="Contoh: Mythic">
           <span class="pesan-galat">Rank wajib diisi.</span>
         </div>
         <div class="form-kolom">
-          <label for="winrate">Winrate (%)</label>
-          <input type="number" id="winrate" name="winrate" required min="0" max="100" placeholder="60">
+          <label for="Winrate">Winrate (%)</label>
+          <input type="number" id="Winrate" name="Winrate" required min="0" max="100" placeholder="60">
           <span class="pesan-galat">Isi winrate antara 0 sampai 100.</span>
         </div>
         <div class="form-kolom">
-          <label for="dicapai-pada">Dicapai pada</label>
-          <input type="date" id="dicapai-pada" name="dicapai-pada" required>
+          <label for="Dicapai-pada">Dicapai pada</label>
+          <input type="date" id="Dicapai-pada" name="Dicapai pada" required>
           <span class="pesan-galat">Pilih tanggal yang valid.</span>
         </div>
         <button type="submit">Simpan</button>
