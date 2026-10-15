@@ -43,9 +43,38 @@ export function buildCard(project) {
 }
 
 export function render(list) {
+    container.textContent = "";
+
+    if (list.length === 0) {
+        empty.hidden = false;
+        return;
+    }
+    empty.hidden = true;
+
     list.forEach((project) => {
         container.append(buildCard(project));
     });
 }
 
+export function markActiveButton(activeButton) {
+    document.querySelectorAll("#filter button").forEach((button) => {
+        button.classList.toggle("active", button === activeButton);
+    });
+}
+
+filterRow.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+
+    markActiveButton(button);
+
+    const category = button.dataset.category;
+    const selected = daftarProyek.filter(
+        (project) => category === "all" || project.category === category
+    );
+
+    render(selected);
+});
+
 render(daftarProyek);
+
