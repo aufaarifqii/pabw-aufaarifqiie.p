@@ -40,14 +40,39 @@ console.table(selesai);
 const katalog = daftarProyek.find((proyek) => proyek.judul === "Game Valorant");
 console.table(katalog);
 
+const container = document.querySelector('#artikel-list') || document.querySelector('#list');
+const statusEl = document.querySelector('#artikel-status');
+
+function render(list) {
+  if (!container) return;
+  container.textContent = '';
+  if (!list || list.length === 0) {
+    if (statusEl) statusEl.textContent = 'Tidak ada data untuk ditampilkan.';
+    else container.textContent = 'Tidak ada data untuk ditampilkan.';
+    return;
+  }
+  if (statusEl) statusEl.textContent = '';
+  list.forEach(function (n) {
+    const card = document.createElement('article');
+    card.className = 'kartu';
+    const heading = document.createElement('h3');
+    heading.textContent = n.title;
+    card.appendChild(heading);
+    container.appendChild(card);
+  });
+}
+
+window.render = render;
+
 async function muatData() {
-  const container = document.querySelector('#list');
+  if (statusEl) statusEl.textContent = 'Memuat data...';
+  else if (container) container.textContent = 'Memuat data...';
   try {
     const data = await fetchNews();
+    render(data);
   } catch (error) {
-    if (container) {
-      container.textContent = 'Gagal memuat: ' + error.message;
-    }
+    if (statusEl) statusEl.textContent = 'Gagal memuat: ' + error.message;
+    else if (container) container.textContent = 'Gagal memuat: ' + error.message;
   }
 }
 

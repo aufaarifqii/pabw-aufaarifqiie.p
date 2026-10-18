@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "judul": "Game Mobile Legend",
+    "title": "Game Mobile Legend",
+    "category": "moba",
+    "tahun": 2026,
+    "selesai": true,
+    "rank": "Mythic Imortal",
+    "winrate": "65%",
+    "gambar": "game.webp"
+  },
+  {
+    "id": 2,
+    "judul": "Game Free Fire",
+    "title": "Game Free Fire",
+    "category": "fps",
+    "tahun": 2022,
+    "selesai": true,
+    "rank": "Master",
+    "winrate": "40%",
+    "gambar": "game2.webp"
+  },
+  {
+    "id": 3,
+    "judul": "Game Valorant",
+    "title": "Game Valorant",
+    "category": "fps",
+    "tahun": 2026,
+    "selesai": false,
+    "rank": "Silver",
+    "winrate": "50%",
+    "gambar": "game3.webp"
+  }
+]
