@@ -1,3 +1,5 @@
+import { fetchNews } from './api.js';
+
 const profil = {
   nama: "Aufaa Rifqii Eka Prahastya",
   peran: "Mahasiswa Informatika Semester 3",
@@ -37,5 +39,18 @@ console.table(selesai);
 
 const katalog = daftarProyek.find((proyek) => proyek.judul === "Game Valorant");
 console.table(katalog);
+
+async function muatData() {
+  const container = document.querySelector('#list');
+  try {
+    const data = await fetchNews();
+  } catch (error) {
+    if (container) {
+      container.textContent = 'Gagal memuat: ' + error.message;
+    }
+  }
+}
+
+muatData();
 
 export { daftarProyek, profil };
