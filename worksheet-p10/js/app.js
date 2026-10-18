@@ -79,3 +79,4 @@ async function muatData() {
 muatData();
 
 export { daftarProyek, profil };
+
