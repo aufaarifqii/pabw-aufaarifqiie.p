@@ -145,3 +145,4 @@ form.addEventListener("submit", (event) => {
     });
     checkAllFields();
 });
+
